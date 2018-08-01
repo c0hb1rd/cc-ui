@@ -1,0 +1,54 @@
+.flex-row {
+  display: flex;
+  flex-direction: row; }
+
+.flex-column {
+  display: flex;
+  flex-direction: column; }
+
+.flex-grow {
+  flex: 1; }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.flex-y-center {
+  align-items: center; }
+
+.flex-x-center {
+  justify-content: center; }
+
+.abs-area {
+  position: absolute; }
+
+.abs-max {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.real-area {
+  position: relative; }
+
+.abs-max-height {
+  top: 0;
+  bottom: 0; }
+
+.abs-max-width {
+  left: 0;
+  right: 0; }
+
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  display: flex; }
+
+/*# sourceMappingURL=main.css.map */
