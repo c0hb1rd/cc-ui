@@ -1,0 +1,9 @@
+.default-theme .main-view {
+  background: url("./images/bg2.png") no-repeat center;
+  background-size: cover; }
+  .default-theme .main-view .main-header .title-bar .title-label {
+    color: #e4e4e4; }
+.default-theme .debug {
+  border-color: #ffffff; }
+
+/*# sourceMappingURL=theme-blue.css.map */

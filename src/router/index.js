@@ -3,10 +3,12 @@ import Router from 'vue-router'
 
 import App from '@/App'
 import Home from '@/Home'
-import CanvasDemo from '@/components/CanvasDemo'
-import ConsoleDemo from '@/components/ConsoleDemo'
+import CanvasDemo from '@/demo/CanvasDemo'
+import ConsoleDemo from '@/demo/ConsoleDemo'
+import ScrollMsgDemo from '@/demo/ScrollMsgDemo'
+import ComponentDemo from '@/demo/ComponentDemo'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -20,7 +22,6 @@ export default new Router({
           path: '/home',
           name: 'Home',
           component: Home,
-          redirect: '/home/canvas',
           children: [
             {
               path: '/home/canvas',
@@ -31,6 +32,16 @@ export default new Router({
               path: '/home/console',
               name: 'ConsoleDemo',
               component: ConsoleDemo
+            },
+            {
+              path: '/home/scroll',
+              name: 'ScrollMsgDemo',
+              component: ScrollMsgDemo
+            },
+            {
+              path: '/home/component',
+              name: 'ComponentDemo',
+              component: ComponentDemo
             }
           ]
         }

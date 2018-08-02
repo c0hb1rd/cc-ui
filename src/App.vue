@@ -6,6 +6,9 @@
 
 <script>
   export default {
-    name: 'App'
+    name: 'App',
+    mounted() {
+      document.body.className += ' default-theme'
+    }
   }
 </script>

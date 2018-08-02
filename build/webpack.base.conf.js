@@ -4,10 +4,9 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
-
 
 
 module.exports = {
@@ -30,15 +29,15 @@ module.exports = {
     }
   },
   module: {
+    loaders: [
+      {test: /jquery-mousewheel/, loader: "imports?define=>false&this=>window"},
+      {test: /malihu-custom-scrollbar-plugin/, loader: "imports?define=>false&this=>window"}
+    ],
     rules: [
       {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig
-      },
-      {
-        test: /\.s[a|c]ss$/,
-        loader: 'sass-loader',
       },
       {
         test: /\.js$/,

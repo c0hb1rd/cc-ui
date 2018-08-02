@@ -1,5 +1,5 @@
 <template>
-    <div class="console-demo"></div>
+    <div class="console-demo animated fadeIn"></div>
 </template>
 
 <script>

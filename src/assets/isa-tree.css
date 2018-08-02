@@ -1,0 +1,40 @@
+.isa-tree {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  .isa-tree ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .isa-tree ul li {
+      display: flex;
+      flex-direction: column; }
+      .isa-tree ul li:first-child {
+        border-top: none; }
+      .isa-tree ul li:last-child {
+        border-bottom: none; }
+    .isa-tree ul .node-content {
+      height: 40px;
+      line-height: 40px;
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+      .isa-tree ul .node-content:hover {
+        background-color: rgba(21, 123, 160, 0.2); }
+      .isa-tree ul .node-content .icon {
+        text-align: center;
+        width: 20px;
+        color: #e4e4e4;
+        cursor: pointer;
+        padding: 0 5px;
+        transition: transform .2s; }
+      .isa-tree ul .node-content .content {
+        color: #e4e4e4;
+        flex-grow: 1; }
+    .isa-tree ul .node-children {
+      transition: all .3s;
+      position: relative; }
+
+/*# sourceMappingURL=isa-tree.css.map */
