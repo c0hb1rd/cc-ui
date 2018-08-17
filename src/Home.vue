@@ -1,39 +1,30 @@
 <template>
-  <div class="home-area flex-grow real-area flex-column">
-    <header class="home-header flex-row flex-y-center">
+  <div class="home-area flex-grow rel-area flex-row">
+    <cc-menu :menus="menus"></cc-menu>
 
-    </header>
+    <div class="flex-grow flex-column rel-area">
+      <header style="min-height: 70px; max-height: 70px; background-color: #fff; top: 0;">
 
-    <section class="flex-grow home-content flex-row">
-      <aside class="home-menu flex-column" :style="{minWidth: size + 'px', maxWidth: size + 'px'}">
-        <ul class="flex-grow">
-          <li :class="active === menu.index ? 'choose' : ''" @click="menu.click" v-for="menu in menus">
-            <span></span><span><i :class="menu.icon"></i></span>
-            <span>{{ menu.name }}</span>
-          </li>
-        </ul>
-        <footer class="home-menu-footer flex-row flex-y-center" style="justify-content: flex-end">
-          <div style="max-width: 60px; min-width: 60px;" class="flex-center">
-            <el-button size="mini" :icon="btnIcon" :type="btnType" @click="toggle"></el-button>
-          </div>
-        </footer>
-      </aside>
-      <div class="home-router flex-grow flex-column real-area">
+      </header>
+      <div class="abs-area abs-max-width flex-column flex-grow" style="top: 70px; bottom: 0;">
         <router-view></router-view>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
 <script>
+  import CcMenu from 'cc@/menu/Menu'
+
   export default {
+    components: {CcMenu},
     props: {},
     watch: {},
     methods: {
       toggle() {
-        this.size = this.size === 300 ? 60 : 300;
-        this.btnType = this.size === 300 ? 'primary' : 'info';
-        this.btnIcon = this.size === 300 ? 'el-icon-arrow-left' : 'el-icon-arrow-right';
+        this.size = this.size === 240 ? 60 : 240;
+        this.btnType = this.size === 240 ? 'primary' : 'info';
+        this.btnIcon = this.size === 240 ? 'el-icon-arrow-left' : 'el-icon-arrow-right';
       }
     },
     data() {
@@ -44,28 +35,29 @@
         active: 1,
         menus: [
           {
-            name: 'Console 控制台', icon: 'fa fa-window-maximize', index: 1, click: () => {
-              this.active = 1;
-              this.$router.push('/home/console')
-            }
-          },
-          {
-            name: 'Scroll 滚动消息', icon: 'fa fa-wpforms', index: 2, click: () => {
-              this.active = 2;
-              this.$router.push('/home/scroll')
-            }
-          },
-          {
-            name: 'Canvas 画板', icon: 'fa fa-paint-brush', index: 3, click: () => {
-              this.active = 3;
-              this.$router.push('/home/canvas')
-            }
-          },
-          {
-            name: 'Component 组件', icon: 'fa fa-th-list', index: 4, click: () => {
-              this.active = 4;
-              this.$router.push('/home/component')
-            }
+            label: 'Component 组件', icon: 'fa fa-th-list', children: [
+              {
+                label: 'Toolbar 操作栏', click: () => {
+                  this.$router.push('/cc/components/toolbar');
+                }
+              },
+              {
+                label: 'Table 表格', click: () => {
+                  this.$router.push('/cc/components/table');
+                }
+              },
+              {
+                label: 'Form 表单', click: () => {
+                  this.$router.push('/cc/components/form');
+                }
+              },
+              {
+                label: 'Dialog 弹框', click: () => {
+                  this.$router.push('/cc/components/dialog');
+                }
+              }
+            ]
+
           },
         ]
       }
@@ -73,7 +65,7 @@
     created() {
     },
     mounted() {
-      this.menus[0].click();
+      // this.menus[0].click();
     },
     destroyed() {
     },
@@ -115,12 +107,12 @@
           }
 
           li {
-            height: 60px;
-            line-height: 60px;
+            height: 40px;
+            line-height: 40px;
             display: flex;
-            color: #c1c1c1;
+            color: #a6a6a6;
             cursor: pointer;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+            font-size: 14px;
             transition: background-color .3s, color .2s, box .2s;
 
             &:hover {
