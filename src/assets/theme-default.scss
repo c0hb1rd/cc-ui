@@ -1,3 +1,5 @@
+
+
 $border-color: hsla(0, 0, 100%, .2);
 
 $area-bg: rgba(0, 0, 0, 0.3);
@@ -12,10 +14,16 @@ $select-item-bg: rgba(33, 65, 77, .8);
 $select-item-hover-bg: rgba(130, 248, 255, .2);
 $select-item-selected-bg: rgba(130, 248, 255, .4);
 
+$background: #3D4D65;
+
 $green: #4eb1b4;
 $pink: #ba70cc;
 $blue: #547dd9;
 $yellow: #c1bc6a;
+
+.common-background {
+  background-color: $background;
+}
 
 .color-blue {
   color: $blue;
@@ -664,6 +672,7 @@ $yellow: #c1bc6a;
     }
 
     .el-table__body-wrapper {
+
       .current-row {
         tr, td {
           background-color: rgba(87, 182, 182, 0.4) !important;
