@@ -1,5 +1,5 @@
 <template>
-  <div class="component-demo abs-max">
+  <div class="component-demo abs-max animated fadeIn">
     <div class="demo-item flex-column">
       <div class="demo-item-title flex-row flex-y-center">
         <h2>操作栏 CommonHeader</h2>
