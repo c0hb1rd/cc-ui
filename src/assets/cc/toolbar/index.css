@@ -1,0 +1,16 @@
+.table-footer-bar, .table-header-bar {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 5px 10px; }
+  .table-footer-bar .bar-item, .table-header-bar .bar-item {
+    height: 40px; }
+    .table-footer-bar .bar-item > div > div, .table-header-bar .bar-item > div > div {
+      margin-right: 5px !important; }
+
+.table-footer-bar {
+  bottom: 0; }
+
+.table-header-bar {
+  margin-bottom: 5px; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: Helvetica, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif; }
+
+.font-10 {
+  font-size: 10px; }
+
+.font-12 {
+  font-size: 12px; }
+
+.font-14 {
+  font-size: 14px; }
+
+.font-16 {
+  font-size: 16px; }
+
+.font-18 {
+  font-size: 18px; }
+
+.flex-row {
+  display: flex;
+  flex-direction: row !important; }
+
+.flex-column {
+  display: flex;
+  flex-direction: column !important; }
+
+.flex-grow {
+  flex: 1; }
+
+.flex-center {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important; }
+
+.flex-j-center {
+  display: flex;
+  justify-content: center !important; }
+
+.flex-a-center {
+  display: flex;
+  align-items: center !important; }
+
+.abs-area {
+  position: absolute; }
+
+.rel-area {
+  position: relative; }
+
+.abs-max {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.abs-left {
+  left: 0; }
+
+.abs-right {
+  right: 0; }
+
+.abs-top {
+  top: 0; }
+
+.abs-bottom {
+  bottom: 0; }
+
+.abs-max-height {
+  top: 0;
+  bottom: 0; }
+
+.abs-max-width {
+  right: 0;
+  left: 0; }
+
+/*# sourceMappingURL=layout-default.css.map */

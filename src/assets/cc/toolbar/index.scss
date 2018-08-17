@@ -1,0 +1,22 @@
+@import "../color-default";
+
+.cc-toolbar {
+  background-color: $cc-white;
+  border: 1px solid $cc-border-black;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+
+  .title {
+    font-size: 14px;
+    color: $cc-dark-gray;
+  }
+
+  .bar-item {
+    height: 40px;
+
+    & > div > div {
+      margin-right: 5px !important;
+    }
+  }
+
+}

@@ -1,0 +1,151 @@
+@import "../color-default";
+
+.el-table {
+  border: 1px solid $cc-border-black !important;
+
+  .el-table__row:hover {
+    td {
+      background-color: rgba(87, 182, 182, 0.2);
+    }
+  }
+
+  .expand-body {
+    background-color: $cc-dark-white !important;
+  }
+
+  td, th {
+    border-color: $cc-border-black !important;
+  }
+
+  .el-checkbox__inner {
+
+  }
+
+  .is-checked {
+    .el-checkbox__inner {
+      background-color: $cc-light-blue !important;
+    }
+  }
+
+  .is-disabled {
+    .el-checkbox__inner {
+      background-color: $cc-dark-white;
+    }
+  }
+
+  th {
+    border-bottom: 2px solid $cc-border-black !important;
+    & > div {
+      min-height: 40px !important;
+      display: inline-flex !important;
+      flex-direction: row;
+      align-items: center;
+      font-size: 16px;
+      color: $cc-light-black;
+      font-weight: bold;
+    }
+  }
+
+  td, th {
+    color: $cc-black;
+    & > div {
+      background-color: transparent;
+    }
+  }
+
+  tr {
+  }
+
+  tr:nth-child(odd) {
+  }
+
+  .el-table__body-wrapper {
+
+    .current-row {
+      tr, td {
+        background-color: $cc-light-blue !important;
+        color: white;
+      }
+    }
+
+    .hover-row {
+      td {
+        background-color: rgba(175, 182, 34, 0.2) !important;
+      }
+    }
+  }
+
+  .el-table__expanded-cell {
+    background-color: transparent;
+
+    & > div {
+      background-color: transparent;
+    }
+  }
+
+  .el-table__expanded-cell:hover {
+    background-color: transparent;
+  }
+}
+
+.table-footer-bar {
+  background-color: $cc-white;
+  border: 1px solid $cc-border-black;
+  padding: 5px 10px;
+
+  .bar-item {
+    height: 40px;
+
+    & > div > div {
+      margin-right: 5px !important;
+    }
+  }
+}
+
+
+//  span {
+//    color: $cc-black !important;
+//  }
+//
+//  li:hover, button:hover {
+//    color: rgba(114, 209, 212, 0.88) !important;
+//  }
+//
+//  button {
+//    color: $cc-black !important;
+//    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+//    background-color: rgba(0, 0, 0, 0.4) !important;
+//  }
+//
+//  input {
+//    color: $cc-black !important;
+//    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+//    background-color: rgba(0, 0, 0, 0.4) !important;
+//  }
+//
+//  li {
+//    color: $cc-black !important;
+//    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+//    background-color: rgba(0, 0, 0, 0.4) !important;
+//
+//    &:hover {
+//      background-color: rgba(43, 120, 177, 0.2) !important;
+//    }
+//  }
+//
+//  li.active {
+//    color: $cc-black!important;
+//    background-color: $cc-light-gray !important;
+//  }
+//
+//  .el-select {
+//    .el-input {
+//
+//      & > input {
+//        //background-color: rgba(255, 255, 255, 0.1) !important;
+//        //color: $cc-black !important;
+//        //border: 1px solid rgba(255, 255, 255, 0.2) !important;
+//      }
+//    }
+//  }
+//}

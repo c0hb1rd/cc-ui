@@ -1,0 +1,65 @@
+.el-table {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.125); }
+  .el-table .el-table__row:hover td {
+    background-color: rgba(87, 182, 182, 0.2); }
+  .el-table .expand-body {
+    background-color: #ECF0F0 !important; }
+  .el-table td, .el-table th {
+    border-color: rgba(0, 0, 0, 0.125) !important; }
+  .el-table .is-checked .el-checkbox__inner {
+    background-color: #00B2DC !important; }
+  .el-table .is-disabled .el-checkbox__inner {
+    background-color: #ECF0F0; }
+  .el-table th {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.125) !important; }
+    .el-table th > div {
+      min-height: 40px !important;
+      display: inline-flex !important;
+      flex-direction: row;
+      align-items: center;
+      font-size: 16px;
+      color: #1A293A;
+      font-weight: bold; }
+  .el-table td, .el-table th {
+    color: #363636; }
+    .el-table td > div, .el-table th > div {
+      background-color: transparent; }
+  .el-table .el-table__body-wrapper .current-row tr, .el-table .el-table__body-wrapper .current-row td {
+    background-color: #dcebf7 !important; }
+  .el-table .el-table__body-wrapper .hover-row td {
+    background-color: rgba(175, 182, 34, 0.2) !important; }
+  .el-table .el-table__expanded-cell {
+    background-color: transparent; }
+    .el-table .el-table__expanded-cell > div {
+      background-color: transparent; }
+  .el-table .el-table__expanded-cell:hover {
+    background-color: transparent; }
+
+.el-pagination span {
+  color: #e4e4e4 !important; }
+.el-pagination li:hover, .el-pagination button:hover {
+  color: rgba(114, 209, 212, 0.88) !important; }
+.el-pagination button {
+  color: #e4e4e4 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background-color: rgba(0, 0, 0, 0.4) !important; }
+.el-pagination input {
+  color: #e4e4e4 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background-color: rgba(0, 0, 0, 0.4) !important; }
+.el-pagination li {
+  color: #e4e4e4 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background-color: rgba(0, 0, 0, 0.4) !important; }
+  .el-pagination li:hover {
+    background-color: rgba(43, 120, 177, 0.2) !important; }
+.el-pagination li.active {
+  color: rgba(114, 209, 212, 0.88) !important;
+  background-color: rgba(43, 120, 177, 0.4) !important; }
+.el-pagination .el-select .el-input > input {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e4e4e4 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important; }
+
+/*# sourceMappingURL=index.css.map */

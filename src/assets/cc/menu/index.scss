@@ -1,0 +1,107 @@
+@import "../color-default";
+
+.hidden {
+  width: 50px!important;
+  .cc-menu-item__children {display: none!important;}
+
+  .cc-menu-item__icon {margin-left: 5px!important;}
+}
+
+.cc-menu {
+  width: 240px;
+  overflow: hidden;
+  background-color: $cc-dark-black;
+  transition: width .3s;
+
+  .cc-menu-header {
+    height: 70px;
+  }
+
+  .choose-title {
+    & > .cc-menu-item__content {
+      background-color: $cc-light-black;
+      color: $cc-light-gray!important;
+      &:hover {
+        background-color: $cc-light-black;
+      }
+
+    }
+
+    & > div {
+
+      .cc-menu-item__toggle {
+        transform: rotate(90deg);
+      }
+    }
+
+    & > .cc-menu-item__children {
+      height: auto!important;
+    }
+    //color: $cc-green !important;
+  }
+
+  .cc-menu-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .cc-menu-item__contain {
+      margin: 2px 0;
+      overflow: hidden;
+      white-space: nowrap;
+
+
+      .choose-node {
+        background-color: $cc-light-black;
+        &:hover {
+          background-color: $cc-light-black;
+        }
+        color: $cc-green !important;
+      }
+
+      .cc-menu-item__content {
+        height: 50px;
+        line-height: 50px;
+        color: $cc-gray;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover {
+          color: $cc-light-gray;
+          background-color: $cc-light-black;
+        }
+
+        .cc-menu-item__icon {
+          min-width: 40px;
+          max-width: 40px;
+          margin-left: 10px;
+        }
+        .cc-menu-item__label {
+          padding-left: 10px;
+        }
+        .cc-menu-item__toggle {
+          width: 40px;
+          text-align: center;
+          transition: transform .3s;
+        }
+      }
+
+      .cc-menu-item__children {
+        height: 0;
+        overflow: hidden;
+        transition: height .3s;
+
+        .cc-menu-item__contain {margin: 0}
+
+        .cc-menu-item__content {
+          height: 40px;
+          line-height: 40px;
+
+          .cc-menu-item__toggle {
+            display: none
+          }
+        }
+      }
+    }
+  }
+}

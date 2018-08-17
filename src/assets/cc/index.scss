@@ -1,0 +1,32 @@
+@import "layout-default";
+@import "toolbar/index";
+@import "menu/index";
+@import "table/index";
+@import "form/index";
+@import "button/index";
+@import "dialog/index";
+
+body {
+  background-color: $cc-dark-white;
+}
+
+.mCSB_draggerRail {
+  background-color: $cc-dark-white !important;
+}
+
+.mCSB_dragger_bar {
+  background-color: $cc-light-blue !important;
+
+  &:hover {
+    background-color: $cc-blue !important;
+  }
+}
+
+.el-select-dropdown {
+  .el-select-dropdown__list {
+    padding: 0;
+  }
+  li {
+    border-color: $cc-border-black !important;
+  }
+}

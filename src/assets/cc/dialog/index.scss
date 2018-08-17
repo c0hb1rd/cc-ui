@@ -1,0 +1,15 @@
+@import "../color-default";
+
+
+.cc-dialog {
+  .el-dialog {
+    background-color: $cc-dark-white;
+  }
+
+  .el-dialog__body {
+    padding: 10px 20px;
+  }
+  .el-dialog__title {
+    color: $cc-dark-gray!important;
+  }
+}

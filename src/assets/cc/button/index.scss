@@ -1,0 +1,64 @@
+@import "../color-default";
+
+.el-button {
+  border-color: $cc-border-white !important;
+}
+
+.el-button.is-disabled {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border-color: $cc-light-gray !important;
+
+  span {
+    color: $cc-gray !important;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+  }
+}
+
+.el-button--info {
+  background-color: $cc-light-gray !important;
+  span {
+    color: $cc-white!important;
+  }
+
+  &:hover {
+    background-color: $cc-gray !important;
+  }
+}
+
+.el-button--default {
+  background-color: $cc-light-gray !important;
+  span {
+    color: $cc-white!important;
+  }
+
+  &:hover {
+    background-color: $cc-gray !important;
+  }
+}
+
+.el-button--warning {
+  background-color: $cc-light-yellow !important;
+
+  &:hover {
+    background-color: $cc-yellow !important;
+  }
+}
+
+.el-button--danger {
+  background-color: $cc-light-red !important;
+
+  &:hover {
+    background-color: $cc-red !important;
+  }
+}
+
+.el-button--primary {
+  background-color: $cc-light-blue !important;
+
+  &:hover {
+    background-color: $cc-blue !important;
+  }
+}
