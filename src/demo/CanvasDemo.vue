@@ -1,5 +1,5 @@
 <template>
-  <div class="canvas-demo flex-grow flex-column real-area animated fadeIn">
+  <div style="z-index: 2000" class="canvas-demo flex-grow flex-column real-area animated fadeIn">
     <section ref="content" class="abs-max abs-area"></section>
   </div>
 </template>

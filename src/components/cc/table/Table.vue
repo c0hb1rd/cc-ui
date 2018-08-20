@@ -4,7 +4,7 @@
       <slot></slot>
       <slot name="header"></slot>
       <div v-loading="loading" class="flex-column common-table flex-grow rel-area" style="overflow: auto">
-        <div class="content-bar flex-column" :class="contentClassList">
+        <div class="content-bar flex-column flex-grow" :class="contentClassList">
           <el-table ref="table"
                     :height="height"
                     class="common-table-area flex-grow"
@@ -33,7 +33,7 @@
               <template slot-scope="scope">
                 <el-tooltip :open-delay="800"
                             placement="top-start"
-                            :content="(item.formatter ? item.formatter(scope.row[item.prop], scope.row) : scope.row[item.prop]) + '' || '无'">
+                            :content="`${(item.formatter ? item.formatter(scope.row[item.prop], scope.row) : scope.row[item.prop]) || '无'}`">
                   <data-cell :item="item" :row="scope.row"></data-cell>
                 </el-tooltip>
               </template>
@@ -120,7 +120,7 @@
               class: className,
               style: "text-overflow: ellipsis; white-space: nowrap; overflow: hidden"
             }
-          }, data + '' || '无');
+          }, data || '无');
         }
       }
     },

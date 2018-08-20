@@ -1,35 +1,34 @@
 <template>
-  <div class="form-demo animated fadeIn flex-row flex-j-center flex-grow">
-    <div style="margin-right: 100px;">
-      <h3 style="color: #565e66">表单</h3>
-      <div class="item-area" style="width: 400px">
-        <cc-form v-bind="formProps" ref="form">
-          <input type="file" style="display: none" ref="file">
-        </cc-form>
-        <el-button type="info" style="margin-left: 80px" size="mini" @click="formProps.reset">清除</el-button>
-        <el-button type="primary" style="" size="mini" @click="formProps.submit">提交</el-button>
+  <div class="form-demo abs-max animated fadeIn">
+    <div class="flex-grow flex-row flex-center">
+      <div style="margin-right: 100px;">
+        <h3 style="color: #565e66">表单</h3>
+        <div class="item-area" style="width: 400px">
+          <cc-form v-bind="formProps" ref="form">
+            <input type="file" style="display: none" ref="file">
+          </cc-form>
+          <el-button type="info" style="margin-left: 80px" size="mini" @click="formProps.reset">清除</el-button>
+          <el-button type="primary" style="" size="mini" @click="formProps.submit">提交</el-button>
+        </div>
       </div>
-    </div>
 
 
-    <div style="width: 442px">
-      <h3 style="color: #565e66">结果</h3>
-      <div class="item-area result-area" style="height: 531px">
-        <p class="result-area-content">
-          {{ result }}
-        </p>
+      <div style="width: 442px">
+        <h3 style="color: #565e66">结果</h3>
+        <div class="item-area result-area" style="height: 531px">
+          <p class="result-area-content">
+            {{ result }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import CcForm from 'cc@/form/Form'
-
   export default {
     name: "",
     componentName: "",
-    components: {CcForm},
     props: {},
     watch: {},
     methods: {},
@@ -134,10 +133,7 @@
     created() {
     },
     mounted() {
-      this.$(".result-area").mCustomScrollbar({
-        theme: 'inset',
-        axis: 'y'
-      })
+      this.addScrollbar(".form-demo");
     },
     destroyed() {
     },

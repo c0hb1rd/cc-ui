@@ -1,5 +1,5 @@
 <template>
-  <div class="toolbar-demo animated fadeIn">
+  <div class="toolbar-demo abs-max animated fadeIn">
     <cc-toolbar v-bind="simple">
       <template slot="search-bar">
         <el-input clearable :disabled="simple.loading" size="mini" placeholder="请输入" style="width: 120px"></el-input>
@@ -55,18 +55,17 @@
 </template>
 
 <script>
-  import CcToolbar from 'cc@/toolbar/Toolbar'
-
   export default {
     name: "",
     componentName: "",
-    components: {CcToolbar},
     props: {},
     watch: {},
     methods: {},
     data() {
       return {
         simple: {
+          showAction: true,
+          showSearch: true,
           loading: false,
           title: '标准操作栏',
           refresh: () => {
@@ -77,6 +76,8 @@
           }
         },
         search: {
+          showAction: true,
+          showSearch: true,
           loading: false,
           title: '搜索栏',
           actionable: false,
@@ -88,6 +89,8 @@
           }
         },
         action: {
+          showAction: true,
+          showSearch: true,
           loading: false,
           title: '动作栏',
           searchable: false,
@@ -100,6 +103,8 @@
           }
         },
         common: {
+          showAction: true,
+          showSearch: true,
           loading: false,
           title: '没有刷新按钮',
           refreshable: false,
@@ -111,6 +116,8 @@
           }
         },
         refresh: {
+          showAction: true,
+          showSearch: true,
           loading: false,
           title: '只有刷新按钮',
           searchable: false,
@@ -127,6 +134,7 @@
     created() {
     },
     mounted() {
+      this.addScrollbar(".toolbar-demo");
     },
     destroyed() {
     },

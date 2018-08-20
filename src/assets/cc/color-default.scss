@@ -1,26 +1,252 @@
-$cc-primary: #17a2b8;
+$cc-light-primary: #b7d2e8;
+$cc-primary: #4ba7e8;
+$cc-dark-primary: #1e99e8;
 
-$cc-black: #363636;
-$cc-white: #FFFFFF;
-$cc-blue: #328CDE;
-$cc-green: #0BC1C1;
-$cc-red: #e2131b;
-$cc-yellow: #ffa503;
-$cc-gray: #7e8996;
-$cc-purple: #6f6EAB;
-$cc-pink: #e83e8c;
-
+$cc-light-pink: #e870ab;
 $cc-light-black: #1A293A;
-$cc-light-blue: #00B2DC;
-$cc-light-green: #28a745;
+$cc-light-blue: #dcebf7;
+$cc-light-green: #94c7c9;
 $cc-light-red: #e16068;
 $cc-light-yellow: #ffb74b;
 $cc-light-gray: #b2c5d6;
+$cc-light-white: #ECF0F0;
+$cc-light-purple: #b8aade;
+
+$cc-black: #363636;
+$cc-white: #FFFFFF;
+$cc-blue: #59b9f7;
+$cc-green: #61bec6;
+$cc-red: #e2131b;
+$cc-yellow: #ffa503;
+$cc-gray: #7e8996;
+$cc-purple: #b07cff;
+$cc-pink: #e83e8c;
 
 $cc-dark-black: #1D2E43;
-$cc-dark-white: #ECF0F0;
-$cc-dark-blue: #dcebf7;
+$cc-dark-white: #d3d3d3;
+$cc-dark-blue: #139eff;
 $cc-dark-gray: #565e66;
+$cc-dark-green: #0de2e2;
+$cc-dark-yellow: #e0952f;
+$cc-dark-pink: #e80f7c;
+$cc-dark-purple: #7f50c6;
 
 $cc-border-black: rgba(0, 0, 0, .125);
 $cc-border-white: rgba(255, 255, 255, .125);
+
+.cc-primary-color_default {
+  color: $cc-primary
+}
+
+.cc-primary-color_light {
+  color: $cc-light-primary
+}
+
+.cc-primary-color_dark {
+  color: $cc-dark-primary
+}
+
+.cc-primary-bg_default {
+  background-color: $cc-primary
+}
+
+.cc-primary-bg_light {
+  background-color: $cc-light-primary
+}
+
+.cc-primary-bg_dark {
+  background-color: $cc-dark-primary
+}
+
+.cc-black-color_default {
+  color: $cc-black
+}
+
+.cc-black-color_light {
+  color: $cc-light-black
+}
+
+.cc-black-color_dark {
+  color: $cc-dark-black
+}
+
+.cc-black-bg_default {
+  background-color: $cc-black
+}
+
+.cc-black-bg_light {
+  background-color: $cc-light-black
+}
+
+.cc-black-bg_dark {
+  background-color: $cc-dark-black
+}
+
+.cc-blue-color_default {
+  color: $cc-blue
+}
+
+.cc-blue-color_light {
+  color: $cc-light-blue
+}
+
+.cc-blue-color_dark {
+  color: $cc-dark-blue
+}
+
+.cc-blue-bg_default {
+  background-color: $cc-blue
+}
+
+.cc-blue-bg_light {
+  background-color: $cc-light-blue
+}
+
+.cc-blue-bg_dark {
+  background-color: $cc-dark-blue
+}
+
+.cc-white-color_default {
+  color: $cc-white
+}
+
+.cc-white-color_light {
+  color: $cc-light-white
+}
+
+.cc-white-color_dark {
+  color: $cc-dark-white
+}
+
+.cc-white-bg_default {
+  background-color: $cc-white
+}
+
+.cc-white-bg_light {
+  background-color: $cc-light-white
+}
+
+.cc-white-bg_dark {
+  background-color: $cc-dark-white
+}
+
+.cc-green-color_default {
+  color: $cc-green
+}
+
+.cc-green-color_light {
+  color: $cc-light-green
+}
+
+.cc-green-color_dark {
+  color: $cc-dark-green
+}
+
+.cc-green-bg_default {
+  background-color: $cc-green
+}
+
+.cc-green-bg_light {
+  background-color: $cc-light-green
+}
+
+.cc-green-bg_dark {
+  background-color: $cc-dark-green
+}
+
+.cc-gray-color_default {
+  color: $cc-gray
+}
+
+.cc-gray-color_light {
+  color: $cc-light-gray
+}
+
+.cc-gray-color_dark {
+  color: $cc-dark-gray
+}
+
+.cc-gray-bg_default {
+  background-color: $cc-gray
+}
+
+.cc-gray-bg_light {
+  background-color: $cc-light-gray
+}
+
+.cc-gray-bg_dark {
+  background-color: $cc-dark-gray
+}
+
+.cc-yellow-color_default {
+  color: $cc-yellow
+}
+
+.cc-yellow-color_light {
+  color: $cc-light-yellow
+}
+
+.cc-yellow-color_dark {
+  color: $cc-dark-yellow
+}
+
+.cc-yellow-bg_default {
+  background-color: $cc-yellow
+}
+
+.cc-yellow-bg_light {
+  background-color: $cc-light-yellow
+}
+
+.cc-yellow-bg_dark {
+  background-color: $cc-dark-yellow
+}
+
+.cc-pink-color_default {
+  color: $cc-pink
+}
+
+.cc-pink-color_light {
+  color: $cc-light-pink
+}
+
+.cc-pink-color_dark {
+  color: $cc-dark-pink
+}
+
+.cc-pink-bg_default {
+  background-color: $cc-pink
+}
+
+.cc-pink-bg_light {
+  background-color: $cc-light-pink
+}
+
+.cc-pink-bg_dark {
+  background-color: $cc-dark-pink
+}
+
+.cc-purple-color_default {
+  color: $cc-purple
+}
+
+.cc-purple-color_light {
+  color: $cc-light-purple
+}
+
+.cc-purple-color_dark {
+  color: $cc-dark-purple
+}
+
+.cc-purple-bg_default {
+  background-color: $cc-purple
+}
+
+.cc-purple-bg_light {
+  background-color: $cc-light-purple
+}
+
+.cc-purple-bg_dark {
+  background-color: $cc-dark-purple
+}
+

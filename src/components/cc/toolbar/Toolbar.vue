@@ -19,7 +19,7 @@
       <slot></slot>
     </div>
     <el-collapse-transition>
-      <div v-show="searchShow" class="bar-item">
+      <div v-show="searchShow && searchable" class="bar-item">
         <div>
           <slot name="search-bar"></slot>
         </div>
@@ -27,7 +27,7 @@
     </el-collapse-transition>
 
     <el-collapse-transition>
-      <div v-show="actionShow" class="bar-item">
+      <div v-show="actionShow && actionable" class="bar-item">
         <div>
           <slot name="action-bar"></slot>
         </div>
@@ -46,6 +46,8 @@
       refreshable: {default: true, type: Boolean},
       loading: {default: false, type: Boolean},
       title: {default: "", type: String},
+      showSearch: {default: false},
+      showAction: {default: false},
       refresh: {
         default: () => {
 
@@ -55,8 +57,8 @@
     methods: {},
     data() {
       return {
-        actionShow: false,
-        searchShow: false
+        actionShow: this.showAction,
+        searchShow: this.showSearch
       }
     },
     watch: {

@@ -2,25 +2,26 @@
 
 .el-button {
   border-color: $cc-border-white !important;
+  background-color: $cc-dark-white !important;
 }
 
 .el-button.is-disabled {
-  background-color: rgba(0, 0, 0, 0.3) !important;
+  background-color: $cc-gray !important;
   border-color: $cc-light-gray !important;
 
   span {
-    color: $cc-gray !important;
+    color: $cc-light-gray !important;
   }
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.3) !important;
+    background-color: $cc-gray !important;
   }
 }
 
 .el-button--info {
   background-color: $cc-light-gray !important;
   span {
-    color: $cc-white!important;
+    color: $cc-white !important;
   }
 
   &:hover {
@@ -31,7 +32,7 @@
 .el-button--default {
   background-color: $cc-light-gray !important;
   span {
-    color: $cc-white!important;
+    color: $cc-white !important;
   }
 
   &:hover {
@@ -56,9 +57,48 @@
 }
 
 .el-button--primary {
-  background-color: $cc-light-blue !important;
+  background-color: $cc-primary !important;
 
   &:hover {
-    background-color: $cc-blue !important;
+    background-color: $cc-dark-primary !important;
   }
 }
+
+.el-button--blue {
+  background-color: $cc-blue !important;
+  span {
+    color: $cc-white!important;
+  }
+
+  &:hover {
+    background-color: $cc-dark-blue !important;
+  }
+}
+
+.el-button--pink {
+  background-color: $cc-light-pink !important;
+  color: $cc-white !important;
+
+  &:hover {
+    background-color: $cc-pink !important;
+  }
+}
+
+.el-button--purple {
+  background-color: $cc-light-purple !important;
+  color: $cc-white !important;
+
+  &:hover {
+    background-color: $cc-purple !important;
+  }
+}
+
+.el-button--green {
+  background-color: $cc-light-green !important;
+  color: $cc-white !important;
+
+  &:hover {
+    background-color: $cc-green !important;
+  }
+}
+

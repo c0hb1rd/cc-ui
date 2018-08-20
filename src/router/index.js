@@ -15,6 +15,8 @@ import TableDemo from '@/demo/TableDemo'
 import ToolbarDemo from '@/demo/ToolbarDemo'
 import FormDemo from '@/demo/FormDemo'
 import DialogDemo from '@/demo/DialogDemo'
+import ButtonDemo from '@/demo/ButtonDemo'
+import ColorDemo from '@/demo/ColorDemo'
 
 Vue.use(Router);
 
@@ -90,12 +92,27 @@ export default new Router({
             {
               path: '/cc/components/form',
               component: FormDemo ,
-              name: 'FormDemo '
+              name: 'FormDemo'
             },
             {
               path: '/cc/components/dialog',
               component: DialogDemo ,
-              name: 'DialogDemo '
+              name: 'DialogDemo'
+            },
+            {
+              path: '/cc/components/button',
+              component: ButtonDemo ,
+              name: 'ButtonDemo'
+            },
+            {
+              path: '/cc/components/color',
+              component: ColorDemo ,
+              name: 'ColorDemo'
+            },
+            {
+              path: '/cc/components/popover',
+              component: PopoverDemo ,
+              name: 'PopoverDemo'
             }
           ]
         },

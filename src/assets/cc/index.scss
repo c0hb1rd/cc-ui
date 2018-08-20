@@ -5,20 +5,27 @@
 @import "form/index";
 @import "button/index";
 @import "dialog/index";
+@import "popover/index";
 
 body {
-  background-color: $cc-dark-white;
+  background-color: $cc-light-white;
 }
 
 .mCSB_draggerRail {
-  background-color: $cc-dark-white !important;
+  background-color: $cc-light-white !important;
+  border-radius: 0 !important;
+}
+
+.mCSB_container {
+  display: flex;
+  flex-direction: column;
 }
 
 .mCSB_dragger_bar {
-  background-color: $cc-light-blue !important;
+  background-color: $cc-primary !important;
 
   &:hover {
-    background-color: $cc-blue !important;
+    background-color: $cc-dark-primary !important;
   }
 }
 

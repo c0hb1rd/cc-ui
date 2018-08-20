@@ -1,7 +1,6 @@
 <template>
-  <div class="scroll-demo flex-grow flex-center animated fadeIn">
-    <section class="content-area">
-
+  <div class="msg-demo animated fadeIn">
+    <section>
       <div class="slider" ref="slider">
         <div class="content-item" v-for="item, index in stack" :key="index">{{ item.info }}</div>
       </div>
@@ -78,22 +77,15 @@
 </script>
 
 <style lang="scss">
-  .scroll-demo {
-    margin: 5px;
-    padding: 5px;
+  .msg-demo {
 
-    * {
-      transition: none !important;
-    }
-
-    .content-area {
+    & > section {
       position: relative;
       border-radius: 5px;
       width: 600px;
-      max-height: 400px;
-      min-height: 400px;
+      height: 600px;
       overflow: hidden;
-      /*padding: 20px 40px;*/
+      margin: 30px;
       background-color: #3D4F63;
     }
 

@@ -1,10 +1,14 @@
 @import "../color-default";
 
 .hidden {
-  width: 50px!important;
-  .cc-menu-item__children {display: none!important;}
+  width: 50px !important;
+  .cc-menu-item__children {
+    display: none !important;
+  }
 
-  .cc-menu-item__icon {margin-left: 5px!important;}
+  .cc-menu-item__icon {
+    margin-left: 5px !important;
+  }
 }
 
 .cc-menu {
@@ -20,7 +24,7 @@
   .choose-title {
     & > .cc-menu-item__content {
       background-color: $cc-light-black;
-      color: $cc-light-gray!important;
+      color: $cc-light-gray !important;
       &:hover {
         background-color: $cc-light-black;
       }
@@ -34,10 +38,40 @@
       }
     }
 
-    & > .cc-menu-item__children {
-      height: auto!important;
+    $menu-item-height: 40px;
+
+    & > .cc-menu-item__children_1 {
+      height: $menu-item-height !important;
     }
-    //color: $cc-green !important;
+
+    & > .cc-menu-item__children_2 {
+      height: $menu-item-height * 2 !important;
+    }
+    & > .cc-menu-item__children_3 {
+      height: $menu-item-height * 3 !important;
+    }
+    & > .cc-menu-item__children_4 {
+      height: $menu-item-height * 4 !important;
+    }
+    & > .cc-menu-item__children_5 {
+      height: $menu-item-height * 5 !important;
+    }
+    & > .cc-menu-item__children_6 {
+      height: $menu-item-height * 6 !important;
+    }
+    & > .cc-menu-item__children_7 {
+      height: $menu-item-height * 7 !important;
+    }
+    & > .cc-menu-item__children_8 {
+      height: $menu-item-height * 8 !important;
+    }
+    & > .cc-menu-item__children_9 {
+      height: $menu-item-height * 9 !important;
+    }
+    & > .cc-menu-item__children_10 {
+      height: $menu-item-height * 10 !important;
+    }
+
   }
 
   .cc-menu-item {
@@ -50,13 +84,12 @@
       overflow: hidden;
       white-space: nowrap;
 
-
       .choose-node {
         background-color: $cc-light-black;
         &:hover {
           background-color: $cc-light-black;
         }
-        color: $cc-green !important;
+        color: $cc-primary !important;
       }
 
       .cc-menu-item__content {
@@ -89,9 +122,11 @@
       .cc-menu-item__children {
         height: 0;
         overflow: hidden;
-        transition: height .3s;
+        transition: height .2s;
 
-        .cc-menu-item__contain {margin: 0}
+        .cc-menu-item__contain {
+          margin: 0
+        }
 
         .cc-menu-item__content {
           height: 40px;

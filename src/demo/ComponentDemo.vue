@@ -5,12 +5,12 @@
         <h2>操作栏 CommonHeader</h2>
       </div>
       <div class="demo-item-bar flex-grow flex-column flex-x-center">
-        <common-header title="这是标题">
+        <cc-toolbar title="这是标题">
           <div class="search-bar flex-center bg-color-yellow" slot="search-bar">搜索区域</div>
           <div class="search-bar flex-center bg-color-blue" slot="search-bar">搜索区域</div>
           <div class="action-bar flex-center bg-color-green" slot="action-bar">配置区域</div>
           <div class="action-bar flex-center bg-color-pink" slot="action-bar">配置区域</div>
-        </common-header>
+        </cc-toolbar>
       </div>
     </div>
 
@@ -59,23 +59,21 @@
         <h2>表格 CommonTable</h2>
       </div>
       <div class="demo-item-bar flex-column real-area" style="height: 290px">
-        <common-table class="flex-grow real-area" v-bind="tableProps">
+        <cc-table class="flex-grow real-area" v-bind="tableProps">
           <div class="search-bar flex-center bg-color-blue" slot="header">表格头部</div>
           <div class="search-bar flex-center bg-color-blue" slot="footer">表格底部</div>
-        </common-table>
+        </cc-table>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import CommonHeader from '../components/CommonHeader'
-  import CommonTable from '../components/CommonTable'
   import PopoverGroup from '../components/PopoverButtonGroup'
   import PopoverButton from '../components/PopoverButton'
 
   export default {
-    components: {CommonHeader, CommonTable, PopoverButton, PopoverGroup},
+    components: {PopoverButton, PopoverGroup},
     props: {},
     watch: {},
     methods: {},

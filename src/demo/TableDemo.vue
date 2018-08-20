@@ -1,7 +1,7 @@
 <template>
   <div class="table-demo flex-column flex-grow rel-area animated fadeIn">
     <cc-table class="" v-bind="tableProps">
-      <cc-toolbar :refresh="tableProps.getData" :loading="tableProps.loading">
+      <cc-toolbar :show-action="true" :show-search="true" :refresh="tableProps.getData" :loading="tableProps.loading">
         <template slot="search-bar">
           <el-input clearable :disabled="tableProps.loading" placeholder="输入框1" size="mini"
                     style="width: 120px"></el-input>
@@ -27,13 +27,9 @@
 </template>
 
 <script>
-  import CcTable from 'cc@/table/Table'
-  import CcToolbar from 'cc@/toolbar/Toolbar'
-
   export default {
     name: "",
     componentName: "",
-    components: {CcTable, CcToolbar},
     props: {},
     watch: {},
     methods: {},

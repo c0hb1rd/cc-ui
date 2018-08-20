@@ -1,10 +1,12 @@
 <template>
   <div class="home-area flex-grow rel-area flex-row">
-    <cc-menu :menus="menus"></cc-menu>
+    <cc-menu ref="menu" :menus="menus"></cc-menu>
 
     <div class="flex-grow flex-column rel-area">
-      <header style="min-height: 70px; max-height: 70px; background-color: #fff; top: 0;">
-
+      <header class="flex-row flex-a-center"
+              style="padding: 0 10px; min-height: 70px; max-height: 70px; background-color: #fff; top: 0;">
+        <el-button size="mini" type="primary" @click="() => {this.$refs.menu.toggle()}"><i class="fa fa-list"></i>
+        </el-button>
       </header>
       <div class="abs-area abs-max-width flex-column flex-grow" style="top: 70px; bottom: 0;">
         <router-view></router-view>
@@ -14,10 +16,7 @@
 </template>
 
 <script>
-  import CcMenu from 'cc@/menu/Menu'
-
   export default {
-    components: {CcMenu},
     props: {},
     watch: {},
     methods: {
@@ -37,6 +36,16 @@
           {
             label: 'Component 组件', icon: 'fa fa-th-list', children: [
               {
+                label: 'Color 配色表', click: () => {
+                  this.$router.push('/cc/components/color');
+                }
+              },
+              {
+                label: 'Button 按钮', click: () => {
+                  this.$router.push('/cc/components/button');
+                }
+              },
+              {
                 label: 'Toolbar 操作栏', click: () => {
                   this.$router.push('/cc/components/toolbar');
                 }
@@ -49,6 +58,11 @@
               {
                 label: 'Form 表单', click: () => {
                   this.$router.push('/cc/components/form');
+                }
+              },
+              {
+                label: 'Popover 浮层', click: () => {
+                  this.$router.push('/cc/components/popover');
                 }
               },
               {
@@ -66,6 +80,7 @@
     },
     mounted() {
       // this.menus[0].click();
+      this.addScrollbar(".toolbar-demo");
     },
     destroyed() {
     },

@@ -1,7 +1,7 @@
 <template>
   <div class="cc-menu flex-column" ref="menu">
     <header class="cc-menu-header">
-      <button @click="toggle($event)">Hidden</button>
+      <slot></slot>
     </header>
     <div class="cc-menu-contain flex-grow">
       <cc-menu-item :menus="menus"></cc-menu-item>

@@ -1,12 +1,12 @@
 <template>
   <div class="dialog-demo animated fadeIn">
-    <cc-toolbar :searchable="false" :refreshable="false" title="表单">
+    <cc-toolbar :show-action="true" :searchable="false" :refreshable="false" title="表单">
       <template slot="action-bar">
         <el-button size="mini" type="primary" @click="dialogProps.visible = true">弹出</el-button>
       </template>
     </cc-toolbar>
 
-    <cc-toolbar :searchable="false" :refreshable="false" title="表格">
+    <cc-toolbar :show-action="true" :searchable="false" :refreshable="false" title="表格">
       <template slot="action-bar">
         <el-button size="mini" type="primary" @click="customProps.visible = true">弹出</el-button>
       </template>
@@ -58,14 +58,9 @@
 </template>
 
 <script>
-  import CcDialog from 'cc@/dialog/Dialog'
-  import CcToolbar from 'cc@/toolbar/Toolbar'
-  import CcTable from 'cc@/table/Table'
-
   export default {
     name: "",
     componentName: "",
-    components: {CcDialog, CcToolbar, CcTable},
     props: {},
     watch: {},
     methods: {},

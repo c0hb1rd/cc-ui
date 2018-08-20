@@ -1,0 +1,45 @@
+@import "../color-default";
+
+.popover-button-group {
+  display: inline-flex;
+}
+
+.popover-btn {
+  border-left-width: 0 !important;
+  border-radius: 0 !important;
+  overflow: hidden;
+
+  span {
+    margin: 0 !important;
+  }
+
+  button {
+    border-left-width: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+  }
+
+  &:first-child {
+    border-left-width: 1px !important;
+
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+
+    button {
+      border-left-width: 1px !important;
+
+      border-top-left-radius: 4px !important;
+      border-bottom-left-radius: 4px !important;
+    }
+  }
+
+  &:last-child {
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+
+    button {
+      border-top-right-radius: 4px !important;
+      border-bottom-right-radius: 4px !important;
+    }
+  }
+}
