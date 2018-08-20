@@ -1,5 +1,5 @@
 <template>
-  <div style="z-index: 2000" class="canvas-demo flex-grow flex-column real-area animated fadeIn">
+  <div class="canvas-demo cc-black-bg_dark flex-grow flex-column rel-area animated fadeIn">
     <section ref="content" class="abs-max abs-area"></section>
   </div>
 </template>
@@ -479,9 +479,7 @@
 
 <style lang="scss">
   .canvas-demo {
-    margin: 30px 60px;
+    margin: 30px ;
     border-radius: 4px;
-
-    background-color: #3D4D65;
   }
 </style>

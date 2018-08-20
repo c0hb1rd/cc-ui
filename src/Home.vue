@@ -73,9 +73,19 @@
             ]
           },
           {
-            label: 'Group 组合', icon: 'fa fa-bank', click: () => {
-              this.$router.push("/cc/component")
-            }
+            label: 'Demo 例子', icon: 'fa fa-bank',
+            children: [
+              {
+                label: '组合', click: () => {
+                  this.$router.push("/cc/component")
+                },
+              },
+              {
+                label: '画板', click: () => {
+                  this.$router.push("/cc/canvas")
+                },
+              }
+            ]
           }
         ]
       }

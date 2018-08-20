@@ -80,6 +80,11 @@ export default new Router({
           name: 'Home',
           children: [
             {
+              path: '/cc/canvas',
+              name: 'CanvasDemo',
+              component: CanvasDemo
+            },
+            {
               path: '/cc/component',
               name: 'ComponentDemo',
               component: ComponentDemo
