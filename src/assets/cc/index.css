@@ -667,8 +667,6 @@ body {
 
 .el-table {
   border: 1px solid rgba(0, 0, 0, 0.125) !important; }
-  .el-table tr {
-    background-color: #1D2E43 !important; }
   .el-table .mCSB_inside > .mCSB_container {
     margin-right: 10px; }
   .el-table .expand-body {

@@ -80,6 +80,11 @@ export default new Router({
           name: 'Home',
           children: [
             {
+              path: '/cc/component',
+              name: 'ComponentDemo',
+              component: ComponentDemo
+            },
+            {
               path: '/cc/components/table',
               component: TableDemo,
               name: 'TableDemo'

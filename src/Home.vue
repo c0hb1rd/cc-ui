@@ -71,8 +71,12 @@
                 }
               }
             ]
-
           },
+          {
+            label: 'Group 组合', icon: 'fa fa-bank', click: () => {
+              this.$router.push("/cc/component")
+            }
+          }
         ]
       }
     },

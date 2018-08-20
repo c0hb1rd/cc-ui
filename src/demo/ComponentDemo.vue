@@ -1,26 +1,24 @@
 <template>
   <div class="component-demo abs-max animated fadeIn">
     <div class="demo-item flex-column">
-      <div class="demo-item-title flex-row flex-y-center">
-        <h2>操作栏 CommonHeader</h2>
+      <div class="demo-item-title  flex-row flex-y-center">
+        <h3 class="cc-gray-color_dark cc-white-bg_default">操作栏 CommonHeader</h3>
       </div>
-      <div class="demo-item-bar flex-grow flex-column flex-x-center">
+      <div class="demo-item-bar cc-white-bg_default flex-grow flex-column flex-x-center">
         <cc-toolbar title="这是标题">
-          <div class="search-bar flex-center bg-color-yellow" slot="search-bar">搜索区域</div>
-          <div class="search-bar flex-center bg-color-blue" slot="search-bar">搜索区域</div>
-          <div class="action-bar flex-center bg-color-green" slot="action-bar">配置区域</div>
-          <div class="action-bar flex-center bg-color-pink" slot="action-bar">配置区域</div>
+          <div class="search-bar flex-center cc-blue-bg_default" slot="search-bar">搜索区域</div>
+          <div class="action-bar flex-center cc-green-bg_default" slot="action-bar">配置区域</div>
         </cc-toolbar>
       </div>
     </div>
 
     <div class="demo-item flex-column">
-      <div class="demo-item-title flex-row flex-y-center">
-        <h2>按钮悬浮层 PopoverButton</h2>
+      <div class="demo-item-title  flex-row flex-y-center">
+        <h3 class="cc-gray-color_dark cc-white-bg_default">按钮悬浮层 PopoverButton</h3>
       </div>
-      <div class="demo-item-bar flex-column real-area" style="padding: 10px 15px">
-        <popover-group>
-          <popover-button v-bind="add" v-model="add.visible">
+      <div class="demo-item-bar cc-white-bg_default flex-column real-area" style="padding: 10px 15px">
+        <cc-popover-group>
+          <cc-popover-button v-bind="add" v-model="add.visible">
             <div>
               <h3 class="level-1-color flex-center">添加标题</h3>
               <p class="flex-center">添加消息</p>
@@ -29,8 +27,8 @@
                 <el-button size="mini" type="primary" @click="add.submit">确定</el-button>
               </div>
             </div>
-          </popover-button>
-          <popover-button v-bind="edit" v-model="edit.visible">
+          </cc-popover-button>
+          <cc-popover-button v-bind="edit" v-model="edit.visible">
             <template>
               <h3 class="level-2-color flex-center">修改标题</h3>
               <p class="flex-center">修改消息</p>
@@ -39,8 +37,8 @@
                 <el-button size="mini" type="primary" @click="edit.submit">确定</el-button>
               </div>
             </template>
-          </popover-button>
-          <popover-button v-bind="del" v-model="del.visible">
+          </cc-popover-button>
+          <cc-popover-button v-bind="del" v-model="del.visible">
             <template>
               <h3 class="level-3-color flex-center">告警标题</h3>
               <p class="flex-center">删除消息</p>
@@ -49,19 +47,17 @@
                 <el-button size="mini" type="danger" @click="del.submit">确定</el-button>
               </div>
             </template>
-          </popover-button>
-        </popover-group>
+          </cc-popover-button>
+        </cc-popover-group>
       </div>
     </div>
 
     <div class="demo-item flex-column">
-      <div class="demo-item-title flex-row flex-y-center">
-        <h2>表格 CommonTable</h2>
+      <div class="demo-item-title  flex-row flex-y-center">
+        <h2 class="cc-gray-color_dark cc-white-bg_default">表格 CommonTable</h2>
       </div>
-      <div class="demo-item-bar flex-column real-area" style="height: 290px">
+      <div class="demo-item-bar cc-white-bg_default flex-column real-area" style="height: 290px">
         <cc-table class="flex-grow real-area" v-bind="tableProps">
-          <div class="search-bar flex-center bg-color-blue" slot="header">表格头部</div>
-          <div class="search-bar flex-center bg-color-blue" slot="footer">表格底部</div>
         </cc-table>
       </div>
     </div>
@@ -69,11 +65,7 @@
 </template>
 
 <script>
-  import PopoverGroup from '../components/PopoverButtonGroup'
-  import PopoverButton from '../components/PopoverButton'
-
   export default {
-    components: {PopoverButton, PopoverGroup},
     props: {},
     watch: {},
     methods: {},
@@ -185,7 +177,6 @@
 <style lang="scss">
   .component-demo {
     margin: 30px 60px;
-    background-color: #3D4F63;
     overflow: auto;
 
     .demo-item {
@@ -201,14 +192,12 @@
           padding: 10px 30px;
           margin: 0;
           border-radius: 5px 5px 0 0;
-          background-color: #2A3844;
         }
       }
 
       .demo-item-bar {
         /*margin: 10px;*/
         padding: 5px 10px;
-        background-color: #2A3844;
         border-radius: 0 5px 5px 5px;
         overflow: hidden;
         box-shadow: 5px 5px 3px rgba(0, 0, 0, .5);
