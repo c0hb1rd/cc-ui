@@ -1,8 +1,8 @@
 <template>
-  <div class="table-demo flex-column flex-grow rel-area animated fadeIn">
+  <div class="table-demo cc-white-bg_default flex-column flex-grow rel-area animated fadeIn">
     <cc-table class="" v-bind="tableProps">
       <cc-toolbar :show-action="true" :show-search="true" :refresh="tableProps.getData" :loading="tableProps.loading">
-        <template slot="search-bar">
+        <cc-toolbar-item slot="search-bar">
           <el-input clearable :disabled="tableProps.loading" placeholder="输入框1" size="mini"
                     style="width: 120px"></el-input>
           <el-input clearable :disabled="tableProps.loading" placeholder="输入框1" size="mini"
@@ -13,22 +13,25 @@
           </el-select>
 
           <el-button type="primary" size="mini" :loading="tableProps.loading" @click="tableProps.getData">查询</el-button>
-        </template>
-        <template slot="action-bar">
+        </cc-toolbar-item>
+        <cc-toolbar-item slot="action-bar">
           <el-button-group>
             <el-button size="mini" :disabled="tableProps.loading" type="primary">添加</el-button>
             <el-button size="mini" :disabled="tableProps.loading" type="primary">修改</el-button>
             <el-button size="mini" :disabled="tableProps.loading" type="danger">删除</el-button>
           </el-button-group>
-        </template>
+        </cc-toolbar-item>
       </cc-toolbar>
     </cc-table>
   </div>
 </template>
 
 <script>
+  import CcToolbarItem from "../components/cc/toolbar/ToolbarItem";
+
   export default {
     name: "",
+    components: {CcToolbarItem},
     componentName: "",
     props: {},
     watch: {},
@@ -104,5 +107,6 @@
 <style lang="scss">
   .table-demo {
     margin: 30px;
+    padding: 5px 10px;
   }
 </style>

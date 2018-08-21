@@ -94,10 +94,7 @@
       form: null
     }),
     mounted() {
-      this.$(".cc-dialog").mCustomScrollbar({
-        theme: 'inset',
-        axis: 'y'
-      })
+      this.addScrollbar(".cc-dialog")
     },
     methods: {
       getForm() {

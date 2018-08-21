@@ -2,7 +2,7 @@
 
 .cc-toolbar {
   background-color: $cc-white;
-  border: 1px solid $cc-border-black;
+  //border: 1px solid $cc-border-black;
   padding: 5px 10px;
   margin-bottom: 5px;
 
@@ -11,10 +11,10 @@
     color: $cc-dark-gray;
   }
 
-  .bar-item {
-    height: 40px;
+  .cc-toolbar-item {
+    min-height: 35px;
 
-    & > div > div {
+    .cc-toolbar-item__contain > * {
       margin-right: 5px !important;
     }
   }

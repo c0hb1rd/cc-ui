@@ -37,6 +37,12 @@
     </div>
 
     <div class="color-item">
+      <span class="cc-red-bg_light">Light Red</span>
+      <span class="cc-red-bg_default">Default Red</span>
+      <span class="cc-red-bg_dark">Dark Red</span>
+    </div>
+
+    <div class="color-item">
       <span class="cc-purple-bg_light">Light Purple</span>
       <span class="cc-purple-bg_default">Default Purple</span>
       <span class="cc-purple-bg_dark">Dark Purple</span>

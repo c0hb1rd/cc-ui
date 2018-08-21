@@ -134,6 +134,7 @@
     },
     mounted() {
       this.addScrollbar(".form-demo");
+      this.addScrollbar(".result-area");
     },
     destroyed() {
     },

@@ -1,15 +1,15 @@
 <template>
   <div class="dialog-demo animated fadeIn">
     <cc-toolbar :show-action="true" :searchable="false" :refreshable="false" title="表单">
-      <template slot="action-bar">
+      <cc-toolbar-item slot="action-bar">
         <el-button size="mini" type="primary" @click="dialogProps.visible = true">弹出</el-button>
-      </template>
+      </cc-toolbar-item>
     </cc-toolbar>
 
     <cc-toolbar :show-action="true" :searchable="false" :refreshable="false" title="表格">
-      <template slot="action-bar">
+      <cc-toolbar-item slot="action-bar">
         <el-button size="mini" type="primary" @click="customProps.visible = true">弹出</el-button>
-      </template>
+      </cc-toolbar-item>
     </cc-toolbar>
 
     <div class="item-area">
@@ -58,8 +58,10 @@
 </template>
 
 <script>
+  import CcToolbarItem from "../components/cc/toolbar/ToolbarItem";
   export default {
     name: "",
+    components: {CcToolbarItem},
     componentName: "",
     props: {},
     watch: {},

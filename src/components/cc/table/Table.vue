@@ -196,15 +196,9 @@
     },
     mounted() {
       if (this.height)
-        this.$(".common-table .el-table__body-wrapper").mCustomScrollbar({
-          theme: 'inset',
-          axis: 'y'
-        });
+        this.addScrollbar(".common-table .el-table__body-wrapper", {axis: 'xy'});
       else
-        this.$(".common-table .common-table-area").mCustomScrollbar({
-          theme: 'inset',
-          axis: 'y'
-        });
+        this.addScrollbar(".common-table .common-table-area", {axis: 'xy'});
     },
   }
 </script>

@@ -1,12 +1,12 @@
-$cc-light-primary: #b7d2e8;
-$cc-primary: #4ba7e8;
+$cc-light-primary: rgba(201, 231, 255, 0.25);
+$cc-primary: #53b5ef;
 $cc-dark-primary: #1e99e8;
 
 $cc-light-pink: #e870ab;
 $cc-light-black: #1A293A;
 $cc-light-blue: #dcebf7;
 $cc-light-green: #94c7c9;
-$cc-light-red: #e16068;
+$cc-light-red: #ff7d7f;
 $cc-light-yellow: #ffb74b;
 $cc-light-gray: #b2c5d6;
 $cc-light-white: #ECF0F0;
@@ -16,7 +16,7 @@ $cc-black: #363636;
 $cc-white: #FFFFFF;
 $cc-blue: #59b9f7;
 $cc-green: #61bec6;
-$cc-red: #e2131b;
+$cc-red: #ff4d55;
 $cc-yellow: #ffa503;
 $cc-gray: #7e8996;
 $cc-purple: #b07cff;
@@ -30,8 +30,9 @@ $cc-dark-green: #0de2e2;
 $cc-dark-yellow: #e0952f;
 $cc-dark-pink: #e80f7c;
 $cc-dark-purple: #7f50c6;
+$cc-dark-red: #ff2325;
 
-$cc-border-black: rgba(0, 0, 0, .125);
+$cc-border-black: rgba(0, 0, 0, 0.07);
 $cc-border-white: rgba(255, 255, 255, .125);
 
 .cc-primary-color_default {
@@ -250,3 +251,27 @@ $cc-border-white: rgba(255, 255, 255, .125);
   background-color: $cc-dark-purple
 }
 
+
+.cc-red-color_default {
+  color: $cc-red
+}
+
+.cc-red-color_light {
+  color: $cc-light-red
+}
+
+.cc-red-color_dark {
+  color: $cc-dark-red
+}
+
+.cc-red-bg_default {
+  background-color: $cc-red
+}
+
+.cc-red-bg_light {
+  background-color: $cc-light-red
+}
+
+.cc-red-bg_dark {
+  background-color: $cc-dark-red
+}

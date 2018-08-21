@@ -43,3 +43,16 @@
     }
   }
 }
+
+h3 {
+  margin-bottom: 0;
+}
+
+.el-popover {
+  padding: 0 !important;
+
+  .cc-popover-footer {
+    height: 50px;
+  }
+}
+

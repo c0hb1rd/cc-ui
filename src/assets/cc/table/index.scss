@@ -1,7 +1,7 @@
 @import "../color-default";
 
 .el-table {
-  border: 1px solid $cc-border-black !important;
+  //border: 1px solid $cc-border-black !important;
 
   .mCSB_inside > .mCSB_container {
     margin-right: 10px;
@@ -52,12 +52,16 @@
     }
   }
 
-  tr {
+  .el-table__row {
     &:hover {
       tr, td {
         background-color: $cc-light-primary !important;
       }
     }
+  }
+
+  tr {
+
   }
 
   tr:nth-child(odd) {
@@ -87,16 +91,8 @@
 
 .table-footer-bar {
   background-color: $cc-white;
-  border: 1px solid $cc-border-black;
+  //border: 1px solid $cc-border-black;
   padding: 5px 10px;
-
-  .bar-item {
-    height: 40px;
-
-    & > div > div {
-      margin-right: 5px !important;
-    }
-  }
 }
 
 .el-pagination {

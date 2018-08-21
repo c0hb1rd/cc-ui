@@ -1,8 +1,8 @@
 <template>
-  <header class="cc-toolbar common-header-area">
-    <div class="bar-item flex-row flex-center rel-area" v-if="searchable || actionable || refreshable">
+  <div class="cc-toolbar common-header-area">
+    <div class="cc-toolbar-item flex-row flex-center rel-area" v-if="searchable || actionable || refreshable">
       <span class="title">{{ title }}</span>
-      <el-button-group style="position: absolute; top: 5px; left: 0;">
+      <el-button-group style="position: absolute; top: 4px; left: 0;">
         <el-tooltip v-if="searchable" :open-delay="800" content="查询" placement="top">
           <el-button icon="el-icon-search" size="mini" @click="searchShow = !searchShow"
                      :type="searchShow ? 'primary' : 'info'"></el-button>
@@ -19,21 +19,17 @@
       <slot></slot>
     </div>
     <el-collapse-transition>
-      <div v-show="searchShow && searchable" class="bar-item">
-        <div>
-          <slot name="search-bar"></slot>
-        </div>
+      <div v-show="searchShow && searchable">
+        <slot name="search-bar"></slot>
       </div>
     </el-collapse-transition>
 
     <el-collapse-transition>
-      <div v-show="actionShow && actionable" class="bar-item">
-        <div>
-          <slot name="action-bar"></slot>
-        </div>
+      <div v-show="actionShow && actionable">
+        <slot name="action-bar"></slot>
       </div>
     </el-collapse-transition>
-  </header>
+  </div>
 </template>
 
 <script>
@@ -63,10 +59,16 @@
     },
     watch: {
       actionShow(val) {
-        this.$emit('action', val);
+        this.$emit('change', {
+          type: 'action',
+          value: val
+        });
       },
       searchShow(val) {
-        this.$emit('search', val);
+        this.$emit('change', {
+          type: 'search',
+          value: val
+        });
       }
     }
   }

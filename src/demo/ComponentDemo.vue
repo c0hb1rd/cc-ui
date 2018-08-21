@@ -7,7 +7,9 @@
       <div class="demo-item-bar cc-white-bg_default flex-grow flex-column flex-x-center">
         <cc-toolbar title="这是标题">
           <div class="search-bar flex-center cc-blue-bg_default" slot="search-bar">搜索区域</div>
-          <div class="action-bar flex-center cc-green-bg_default" slot="action-bar">配置区域</div>
+          <div class="search-bar flex-center cc-green-bg_default" slot="search-bar">搜索区域</div>
+          <div class="action-bar flex-center cc-pink-bg_default" slot="action-bar">配置区域</div>
+          <div class="action-bar flex-center cc-purple-bg_default" slot="action-bar">配置区域</div>
         </cc-toolbar>
       </div>
     </div>
@@ -56,8 +58,22 @@
       <div class="demo-item-title  flex-row flex-y-center">
         <h2 class="cc-gray-color_dark cc-white-bg_default">表格 CommonTable</h2>
       </div>
-      <div class="demo-item-bar cc-white-bg_default flex-column real-area" style="height: 290px">
+      <div class="demo-item-bar cc-white-bg_default flex-column real-area" style="height: 500px">
         <cc-table class="flex-grow real-area" v-bind="tableProps">
+          <cc-toolbar :show-search="true">
+            <cc-toolbar-item slot="search-bar">
+              <el-input size="mini" style="width: 140px" placeholder="请输入"></el-input>
+              <el-input size="mini" style="width: 140px" placeholder="请输入"></el-input>
+              <el-button size="mini" type="primary">查询</el-button>
+            </cc-toolbar-item>
+            <cc-toolbar-item slot="action-bar">
+              <el-button-group>
+                <el-button size="mini" type="primary">添加</el-button>
+                <el-button size="mini" type="warning">修改</el-button>
+                <el-button size="mini" type="danger">删除</el-button>
+              </el-button-group>
+            </cc-toolbar-item>
+          </cc-toolbar>
         </cc-table>
       </div>
     </div>
@@ -206,16 +222,9 @@
           margin-bottom: 0;
         }
 
-        .el-button-group {
-          left: 5px !important;
-        }
-
-        .search-bar, .action-bar {
-          margin: 5px 0;
-          height: 30px;
-          padding: 5px;
-        }
       }
     }
   }
 </style>
+
+

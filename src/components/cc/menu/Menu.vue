@@ -37,15 +37,11 @@
     created() {
     },
     mounted() {
-      this.$(".cc-menu-contain").mCustomScrollbar({
-        theme: 'inset',
-        axis: 'y'
-      });
+      this.addScrollbar(".cc-menu-contain");
 
       const self = this;
       const itemNode = this.$(".cc-menu-item__node");
       const itemTitle = this.$(".cc-menu-item__title");
-      const itemChildren = this.$(".cc-menu-item__children");
 
       itemNode.on("click", function () {
 

@@ -69,6 +69,11 @@
                 label: 'Dialog 弹框', click: () => {
                   this.$router.push('/cc/components/dialog');
                 }
+              },
+              {
+                label: 'PopoverButton 按钮浮层', click: () => {
+                  this.$router.push('/cc/components/popover_button');
+                }
               }
             ]
           },

@@ -1,5 +1,5 @@
 <template>
-  <div class="button-demo flex-grow animated fadeIn flex-column">
+  <div class="button-demo abs-max animated fadeIn flex-column">
     <div class="cc-white-bg_default">
 
       <el-button size="mini" type="">按钮</el-button>
@@ -177,10 +177,7 @@
     created() {
     },
     mounted() {
-      this.$(".button-demo").mCustomScrollbar({
-        theme: 'inset',
-        axis: 'y'
-      })
+      this.addScrollbar(".button-demo");
     },
     destroyed() {
     },
