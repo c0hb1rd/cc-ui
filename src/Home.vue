@@ -55,9 +55,15 @@
                   this.$router.push('/cc/components/table');
                 }
               },
+
               {
                 label: 'Form 表单', click: () => {
                   this.$router.push('/cc/components/form');
+                }
+              },
+              {
+                label: 'Tree 树', click: () => {
+                  this.$router.push('/cc/components/tree');
                 }
               },
               {
@@ -105,90 +111,3 @@
     },
   }
 </script>
-
-<style lang="scss">
-  .home-area {
-    .home-header {
-      min-height: 50px;
-      max-height: 50px;
-      padding: 10px;
-      background-color: #374355;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
-      z-index: 1;
-    }
-
-    .home-content {
-      .home-menu {
-        overflow: hidden;
-        background-color: #3D4D65;
-        transition: all .2s;
-        white-space: nowrap;
-
-        ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-
-          .choose {
-            color: white !important;
-            background-color: #1E679D !important;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, .5) !important;
-            z-index: 1 !important;
-
-            span:nth-child(1) {
-              background-color: #0092f0 !important;
-            }
-          }
-
-          li {
-            height: 40px;
-            line-height: 40px;
-            display: flex;
-            color: #a6a6a6;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background-color .3s, color .2s, box .2s;
-
-            &:hover {
-              color: rgba(255, 255, 255, .5);
-              background-color: rgba(30, 103, 157, 0.4);
-              box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
-
-              span:nth-child(1) {
-                background-color: rgba(0, 130, 213, 0.4);
-              }
-            }
-
-            span {
-              display: inline-flex;
-              transition: background-color .3s;
-
-              &:nth-child(1) {
-                min-width: 8px;
-                max-width: 8px;
-              }
-              &:nth-child(2) {
-                justify-content: center;
-                align-items: center;
-                min-width: 52px;
-                max-width: 52px;
-              }
-              &:nth-child(3) {
-                flex: 1;
-              }
-            }
-          }
-        }
-
-        .home-menu-footer {
-          min-height: 40px;
-          max-height: 40px;
-          box-shadow: 0 2px 20px rgba(0, 0, 0, .8);
-        }
-      }
-      .home-router {
-
-      }
-    }
-  }
-</style>

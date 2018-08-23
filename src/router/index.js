@@ -15,6 +15,7 @@ import DialogDemo from '@/demo/DialogDemo'
 import ButtonDemo from '@/demo/ButtonDemo'
 import ColorDemo from '@/demo/ColorDemo'
 import PopoverButtonDemo from '@/demo/PopoverButtonDemo'
+import TreeDemo from '@/demo/TreeDemo'
 
 Vue.use(Router);
 
@@ -53,33 +54,38 @@ export default new Router({
             },
             {
               path: '/cc/components/form',
-              component: FormDemo ,
+              component: FormDemo,
               name: 'FormDemo'
             },
             {
               path: '/cc/components/dialog',
-              component: DialogDemo ,
+              component: DialogDemo,
               name: 'DialogDemo'
             },
             {
               path: '/cc/components/button',
-              component: ButtonDemo ,
+              component: ButtonDemo,
               name: 'ButtonDemo'
             },
             {
               path: '/cc/components/color',
-              component: ColorDemo ,
+              component: ColorDemo,
               name: 'ColorDemo'
             },
             {
               path: '/cc/components/popover',
-              component: PopoverDemo ,
+              component: PopoverDemo,
               name: 'PopoverDemo'
             },
             {
               path: '/cc/components/popover_button',
-              component: PopoverButtonDemo ,
+              component: PopoverButtonDemo,
               name: 'PopoverButtonDemo'
+            },
+            {
+              path: '/cc/components/tree',
+              component: TreeDemo,
+              name: 'TreeDemo'
             }
           ]
         },
