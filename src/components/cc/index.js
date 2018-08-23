@@ -19,6 +19,7 @@ import CcPopoverGroup from './popover/PopoverButtonGroup';
 import CcPopoverButton from './popover/PopoverButton';
 import CcDialog from './dialog/Dialog';
 import CcMenu from './menu/Menu';
+import CcTree from './tree/Tree';
 
 import minxi from './mixin';
 
@@ -36,4 +37,5 @@ Vue.component('CcPopoverGroup', CcPopoverGroup);
 Vue.component('CcPopoverButton', CcPopoverButton);
 Vue.component('CcDialog', CcDialog);
 Vue.component('CcMenu', CcMenu);
+Vue.component('CcTree', CcTree);
 
