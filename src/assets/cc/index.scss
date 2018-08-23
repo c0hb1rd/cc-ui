@@ -6,9 +6,42 @@
 @import "button/index";
 @import "dialog/index";
 @import "popover/index";
+@import "tree/index";
 
 body {
   background-color: $cc-light-white;
+}
+
+.cc-alter-box {
+  position: absolute;
+  z-index: 9999;
+  min-width: 150px;
+  line-height: 25px;
+  height: 25px;
+  left: 50%;
+  padding: 5px;
+  border-radius: 4px;
+  transform: translateX(-50%);
+  opacity: 0;
+  top: 0;
+  transition: top .3s, opacity .3s, transform .4s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  background-color: $cc-light-blue;
+
+  .cc-alter-box-icon {
+    font-size: 24px;
+    margin: 0 10px 0 5px;
+    width: 20px;
+  }
+
+  .cc-alter-box-message {
+    text-align: center;
+    margin-right: 5px;
+    flex-grow: 1;
+    color: $cc-light-gray
+  }
 }
 
 .mCSB_draggerRail {
