@@ -1,0 +1,35 @@
+@import '../color-default';
+
+.cc-tree {
+  .cc-tree-node {
+    .cc-tree-node__content {
+      height: 40px;
+      cursor: pointer;
+      border-bottom: 1px solid $cc-border-black;
+
+      &:hover {
+        background-color: $cc-light-primary;
+      }
+
+      .cc-tree-simple-content {
+        color: $cc-primary;
+        font-size: 14px;
+      }
+    }
+
+    .cc-tree-node__icon {
+      min-width: 30px;
+      max-width: 30px;
+      justify-content: center;
+      color: $cc-light-gray;
+      transition: .2s;
+    }
+
+    .cc-tree-node__children {
+      height: 0;
+      transition: height .2s;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+}
