@@ -7,6 +7,8 @@ import CanvasDemo from '@/demo/CanvasDemo'
 import ComponentDemo from '@/demo/ComponentDemo'
 import PopoverDemo from '@/demo/PopoverDemo'
 
+import ChartDemo from '@/demo/ChartDemo'
+
 
 import TableDemo from '@/demo/TableDemo'
 import ToolbarDemo from '@/demo/ToolbarDemo'
@@ -85,6 +87,11 @@ export default new Router({
             {
               path: '/cc/components/tree',
               component: TreeDemo,
+              name: 'TreeDemo'
+            },
+            {
+              path: '/cc/components/chart',
+              component: ChartDemo,
               name: 'TreeDemo'
             }
           ]

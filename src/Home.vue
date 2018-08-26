@@ -67,6 +67,11 @@
                 }
               },
               {
+                label: 'Chart 图', click: () => {
+                  this.$router.push('/cc/components/chart');
+                }
+              },
+              {
                 label: 'Popover 浮层', click: () => {
                   this.$router.push('/cc/components/popover');
                 }
