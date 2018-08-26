@@ -1,10 +1,11 @@
 <template>
   <div class="cc-popover animated fadeIn">
-    <div class="demo-menu  flex-column rel-area cc-primary-bg_default" ref="menuArea">
+    <div class="demo-menu  flex-column rel-area cc-primary-bg_dark" ref="menuArea">
       <ul class="flex-row">
-        <li class="flex-center cc-white-color_default" @mouseenter="enterItem" :key="index" @mouseout="leaveItem"
-            v-for="item, index in items">{{ item.label }}
-          <div class="content-area abs-area cc-primary-bg_light" style="" @mouseover="enter = true">
+        <li class="cc-white-color_default" :key="index" v-for="item, index in items" style="z-index: 20">
+          <div class="flex-grow flex-center" @mouseenter="enterItem($event, index)" @mouseleave="leaveItem(index)">{{ item.label }}</div>
+          <div @mouseenter="enterContent(index)" @mouseleave="leaveItem(index)" :ref="'children_' + index"
+               class="content-area abs-area cc-primary-bg_default">
             <data-cell class="flex-column" :node="item"></data-cell>
           </div>
         </li>
@@ -48,19 +49,24 @@
     },
     watch: {},
     methods: {
-      enterItem(e) {
-        this.enter = true;
+      enterContent(index) {
+        this.$refs['children_' + index][0].style.opacity = 1;
+        this.$refs['children_' + index][0].style.height = 'auto';
+        this.$refs.scrollItem.style.opacity = 1;
+      },
+      enterItem(e, index) {
         const x = this.$refs.menuArea.getClientRects()[0].x;
         this.$refs.scrollItem.style.opacity = 1;
-        this.$refs.scrollItem.style.marginLeft = (e.target.getClientRects()[0].x - x + 44) + 'px';
+        console.log(e.target.getClientRects());
+        this.$refs.scrollItem.style.marginLeft = (Math.floor(e.target.getClientRects()[0].x) - Math.floor(x) - 7 + 50) + 'px';
+
+        this.$refs['children_' + index][0].style.opacity = 1;
+        this.$refs['children_' + index][0].style.height = 'auto';
       },
-      leaveItem() {
-        this.enter = false;
-        setTimeout(() => {
-          if (!this.enter) {
-            document.getElementById("scrollItem").style.opacity = '0';
-          }
-        }, 0)
+      leaveItem(index) {
+        this.$refs['children_' + index][0].style.opacity = 0;
+        this.$refs['children_' + index][0].style.height = '0';
+        this.$refs.scrollItem.style.opacity = 0;
       },
     },
     data() {
@@ -81,6 +87,7 @@
   .cc-popover {
     margin: 10px;
     box-shadow: 3px 3px 2px rgba(0, 0, 0, .5);
+    z-index: 2000;
 
     ul {
       margin: 0;
@@ -94,10 +101,9 @@
         min-width: 100px;
         max-width: 100px;
         cursor: pointer;
-        transition: all .3s;
 
         .content-area {
-          transition: all 1s;
+          transition: all .3s;
           opacity: 0;
           top: 40px;
           left: 20px;
@@ -106,15 +112,6 @@
           box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
 
           min-width: 600px;
-        }
-
-        &:hover {
-          color: #83e2f9;
-
-          .content-area {
-            opacity: 1;
-            height: auto;
-          }
         }
       }
     }
@@ -126,10 +123,10 @@
       .scrollbar-item {
         opacity: 0;
         display: inline-block;
-        border-bottom: 10px solid #4eb1b4;
+        border-bottom: 10px solid #53b5ef;
         border-left: 6px solid transparent;
         border-right: 6px solid transparent;
-        transition: all .1s;
+        transition: all .2s;
       }
     }
   }
