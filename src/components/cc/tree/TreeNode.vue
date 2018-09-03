@@ -1,5 +1,5 @@
 <template>
-  <div class="cc-tree-simple-content flex-row flex-a-center" @click.prevent.stop="nodeClick">
+  <div class="cc-tree-simple-content flex-row flex-a-center flex-grow" @click.prevent.stop="nodeClick">
     {{ node[props.label] }}
   </div>
 </template>
