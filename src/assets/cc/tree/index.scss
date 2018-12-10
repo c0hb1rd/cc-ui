@@ -1,35 +1,43 @@
 @import '../color-default';
 
 .cc-tree {
-  .cc-tree-node {
-    .cc-tree-node__content {
-      min-height: 40px;
-      border-bottom: 1px solid $cc-border-black;
+    .cc-tree-node {
 
-      &:hover {
-        background-color: $cc-light-primary;
-      }
+        .choose-node {
+            background-color: $cc-primary;
+            &:hover {
+                background-color: $cc-primary;
+            }
+        }
 
-      .cc-tree-simple-content {
-        color: $cc-primary;
-        font-size: 14px;
-      }
+        .cc-tree-node__content {
+            min-height: 40px;
+            border-bottom: 1px solid $cc-border-black;
+
+            &:hover {
+                background-color: $cc-light-primary;
+            }
+
+            .cc-tree-simple-content {
+                color: $cc-primary;
+                font-size: 14px;
+            }
+        }
+
+        .cc-tree-node__icon {
+            cursor: pointer;
+            min-width: 30px;
+            max-width: 30px;
+            justify-content: center;
+            color: $cc-light-gray;
+            transition: .2s;
+        }
+
+        .cc-tree-node__children {
+            height: 0;
+            transition: height .2s;
+            overflow: hidden;
+            white-space: nowrap;
+        }
     }
-
-    .cc-tree-node__icon {
-      cursor: pointer;
-      min-width: 30px;
-      max-width: 30px;
-      justify-content: center;
-      color: $cc-light-gray;
-      transition: .2s;
-    }
-
-    .cc-tree-node__children {
-      height: 0;
-      transition: height .2s;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-  }
 }

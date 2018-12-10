@@ -1,5 +1,53 @@
 @import "../color-default";
 
+
+.cc-popover {
+    margin: 10px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, .5);
+    z-index: 2000;
+
+    .cc-popover-menu-contain {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      /*overflow: hidden;*/
+
+      .cc-popover-menu-item {
+        height: 40px;
+        line-height: 40px;
+        min-width: 100px;
+        max-width: 100px;
+        cursor: pointer;
+
+        .content-area {
+          transition: all .3s;
+          opacity: 0;
+          top: 40px;
+          left: 20px;
+          height: 0;
+          overflow: hidden;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+
+          min-width: 600px;
+        }
+      }
+    }
+
+    .scrollbar-contain {
+      height: 10px;
+      bottom: 0;
+
+      .scrollbar-item {
+        opacity: 0;
+        display: inline-block;
+        border-bottom: 10px solid #53b5ef;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        transition: all .2s;
+      }
+    }
+  }
+
 .popover-button-group {
   display: inline-flex;
 }

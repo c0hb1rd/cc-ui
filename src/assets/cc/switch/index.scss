@@ -1,0 +1,28 @@
+@import "../color-default";
+
+.policy-switch-slider {
+  cursor: pointer;
+  span {
+    user-select: none;
+  }
+  .slider-btn {
+    margin: 0 5px;
+    border: 1px solid $cc-dark-blue;
+    border-radius: 10px;
+    width: 40px;
+    height: 14px;
+    overflow: hidden;
+
+    .slider-btn-ball {
+      border-radius: 90px;
+      width: 40px;
+      transition: left .3s;
+      justify-content: flex-end;
+      height: 14px;
+    }
+  }
+}
+.label-hover{}
+.label-hover:hover{
+  color: $cc-dark-blue;
+}

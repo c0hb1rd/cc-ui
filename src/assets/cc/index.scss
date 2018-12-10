@@ -8,7 +8,7 @@
 @import "popover/index";
 @import "tree/index";
 @import "chart/index";
-
+@import "switch/index";
 body {
   background-color: $cc-light-white;
 }
@@ -70,4 +70,10 @@ body {
   li {
     border-color: $cc-border-black !important;
   }
+}
+.cc-blue-bg_dark_theme{
+  background-color: #1D2E43;
+}
+.cc-blue-bg_primary_theme{
+  background-color: #1E3243;
 }

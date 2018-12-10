@@ -1,5 +1,5 @@
 <template>
-  <div class="cc-tree-simple-content flex-row flex-a-center flex-grow" @click.prevent.stop="nodeClick">
+  <div class="cc-tree-simple-content flex-row flex-a-center flex-grow" @click="nodeClick($event)">
     {{ node[props.label] }}
   </div>
 </template>
@@ -19,8 +19,8 @@
       }
     },
     methods: {
-      nodeClick() {
-        this.$emit("nodeClick", this.node);
+      nodeClick(event) {
+        this.$emit("nodeClick", event, this.node);
       }
     }
   }

@@ -21,13 +21,18 @@ import CcDialog from './dialog/Dialog';
 import CcMenu from './menu/Menu';
 import CcTree from './tree/Tree';
 import CcChart from './chart/ChartTemplate';
+import CcEditor from './editor/Editor';
+import CcEditorContentArea from './editor/ContentArea';
+import CcEditorLine from './editor/Line';
+import CcEditorIndent from './editor/Indent';
+import CcEditorText from './editor/Text';
 
-import minxi from './mixin';
+import mixin from './mixin';
 
 
 Vue.prototype.$ = $;
 Vue.use(ElementUI);
-Vue.mixin(minxi);
+Vue.mixin(mixin);
 
 Vue.component('CcTable', CcTable);
 Vue.component('CcToolbar', CcToolbar);
@@ -40,4 +45,9 @@ Vue.component('CcDialog', CcDialog);
 Vue.component('CcMenu', CcMenu);
 Vue.component('CcTree', CcTree);
 Vue.component('CcChart', CcChart);
+Vue.component('CcEditor', CcEditor);
+Vue.component('CcEditorContentArea', CcEditorContentArea);
+Vue.component('CcEditorLine', CcEditorLine);
+Vue.component('CcEditorIndent', CcEditorIndent);
+Vue.component('CcEditorText', CcEditorText);
 
